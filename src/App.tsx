@@ -1,7 +1,7 @@
 import Guitar from "./components/Guitar";
 import Header from "./components/Header";
 import { useCart } from "./hooks/useCart";
-import { useState } from "react";
+
 
 function App() {
   // const { auth, carrito } = useCart();
@@ -36,7 +36,10 @@ function App() {
         <div className="row mt-5">
           {data.map((guitar) => {
             return (
-              <Guitar key={guitar.id} guitar={guitar} addToCart={addToCart} />
+              <Guitar 
+                key={guitar.id} 
+                guitar={guitar} 
+                addToCart={addToCart} />
             );
           })}
         </div>
