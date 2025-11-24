@@ -6,9 +6,10 @@ export type Guitar = {
     price: number;
 }
 
-
-export type CartItem = Guitar & {
+//utility types
+export type CartItem = Pick<Guitar, 'id' | 'name' | 'price' | 'image' | 'description' > & {
     quantity: number
 }
+
 
 
