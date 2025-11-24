@@ -11,5 +11,7 @@ export type CartItem = Pick<Guitar, 'id' | 'name' | 'price' | 'image' | 'descrip
     quantity: number
 }
 
+//look up with utility types
+export type GuitarId = Guitar['id']
 
 
