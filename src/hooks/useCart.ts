@@ -1,12 +1,13 @@
 import { useState, useEffect, useMemo } from 'react'
 import {db} from "../data/db";
+import type { CartItem } from '../types'
 
 export const useCart = () => {
 
     // const auth = true;
     // const carrito = [];
 
-    const initialCart = () => {
+    const initialCart = (): CartItem[] => {
     const localStorageCart = localStorage.getItem('cart')
     return localStorageCart ? JSON.parse(localStorageCart) : []
   }
